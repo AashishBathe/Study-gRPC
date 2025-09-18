@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package filler;
+option java_multiple_files = true;
+option java_package = "com.aashish.grpc";
+
+import "google/protobuf/empty.proto";
+
+// Service that returns a single word
+service Filler {
+  // returns a word (e.g. "world")
+  rpc GetWord(google.protobuf.Empty) returns (WordReply);
+}
+
+message WordReply {
+  string word = 1;
+}
