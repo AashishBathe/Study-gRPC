@@ -11,7 +11,7 @@ import net.devh.boot.grpc.server.service.GrpcService;
 public class FillerServiceImpl extends FillerGrpc.FillerImplBase {
 	
 	public void getWord(Empty request, StreamObserver<WordReply> responseObserver) {
-		WordReply reply = WordReply.newBuilder().setWord("world").build();
+		WordReply reply = WordReply.newBuilder().setWord("Aashish!").build();
 		responseObserver.onNext(reply);
 		responseObserver.onCompleted();
 	}
